@@ -32,21 +32,20 @@ class Event extends React.Component {
 						</div>
 						<div className="event__header-name">{eventDetails.name}</div>
 						{!auth && <SignIn/>}
+						{auth && !registered && (
+								<button className="signInBtn" onClick={() => registerForEvent(eventDetails)}>
+									Register
+								</button>
+						)}
+						{auth && registered && (
+							<button className="btn" onClick={() => unregisterFromEvent(eventDetails)}>
+								Unregister
+							</button>
+						)}
 					</section>
 					<section className="event__content">
 						<div className="event__info">
 							<h2 className="heading--secondary">{eventDetails.description}</h2>
-							{auth && !registered && (
-								<button className="signInBtn" onClick={() => registerForEvent(eventDetails)}>
-									Register
-								</button>
-							)}
-							{auth && registered && (
-								<button className="btn" onClick={() => unregisterFromEvent(eventDetails)}>
-									Unregister
-								</button>
-							)}
-							<br/>
 							<div className="event__details">
 								<p>
 									<span className="paragraph__highlight">Prizes Worth:</span> {eventDetails['prize-worth']}
