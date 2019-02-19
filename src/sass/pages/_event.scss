@@ -40,10 +40,20 @@
 			color: $color-white;
 			margin: 4rem 0;
 		}
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 400;
+		}
 	}
 
 	&__details {
 		line-height: 4.5rem;
+		p {
+			span {
+				font-weight: bolder;
+			}
+		}
 	}
 
 	&__contact {
@@ -87,6 +97,11 @@
 	}
 
 	@media (max-width: 600px) {
+
+		&__backbtn {
+			margin-left: -15%;
+		}
+
 		&__content {
 			display: flex;
 			flex-flow: column;
@@ -107,8 +122,10 @@
 		}
 
 		&__contact {
-			span {
-				font-weight: 400;
+			p {
+				span {
+					font-weight: bolder;
+				}
 			}
 
 			a {
@@ -118,6 +135,14 @@
 				u {
 					text-decoration: none;
 					border-bottom: 0.1rem dashed white;
+				}
+			}
+		}
+
+		&__details {
+			p {
+				span {
+					font-weight: bolder;
 				}
 			}
 		}

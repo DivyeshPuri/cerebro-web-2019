@@ -29,7 +29,7 @@ class Event extends React.Component {
 			<main className="event">
 				<div className="container">
 					<Link to="/">
-						<button className="btn">Back</button>
+						<button className="btn event__backbtn">Back</button>
 					</Link>
 					<section className="event__header">
 						<div className="event__header-logo">
