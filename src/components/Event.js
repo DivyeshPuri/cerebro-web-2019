@@ -73,13 +73,13 @@ class Event extends React.Component {
 								<h2 className="heading--secondary"><u>Contact</u></h2>
 								{eventDetails.contact.map(user => (
 									<p key={user}>
-										{user.name} {user.phone} - {user.role}
+										<span>{user.name}</span>, {user.role} { user.phone &&<span><span> - </span> <a href={`tel:${user.phone}`}><u>{user.phone}</u></a></span>}
 									</p>
 								))}
 							</div>
 						</div>
 						<div className="event__rules">
-							<h2 className="heading--secondary">Rules</h2>
+							<h2 className="heading--secondary"><u>Rules</u></h2>
 							<ul>
 								{eventDetails.rules.map(rule => (
 									<li key={rule} className="event__rule">

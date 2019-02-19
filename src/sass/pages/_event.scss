@@ -48,6 +48,21 @@
 
 	&__contact {
 		line-height: 2;
+		p {
+			span {
+				font-weight: bolder;
+			}
+		}
+
+		a {
+			font-size: 1.8rem;
+			display: inline;
+			text-decoration: none;
+			u {
+				text-decoration: none;
+				border-bottom: 0.1rem dashed white;
+			}
+		}
 	}
 
 	&__rules {
@@ -85,6 +100,26 @@
 			flex: 0 0 50%;
 			padding-left: 0rem;
 			border-left: 0px;
+			u {
+				margin-bottom: 0.1rem solid #5EC9F8;
+				text-decoration: none;
+			}
+		}
+
+		&__contact {
+			span {
+				font-weight: 400;
+			}
+
+			a {
+				font-size: 1.8rem;
+				text-decoration: none;
+				display: inline;
+				u {
+					text-decoration: none;
+					border-bottom: 0.1rem dashed white;
+				}
+			}
 		}
 	}
 }
