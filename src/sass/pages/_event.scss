@@ -2,23 +2,31 @@
 	margin: 3rem 0;
 
 	&__header {
-		margin: 5rem 0;
+		margin: 0 0 5rem 0;
 		display: flex;
 		align-items: center;
+		justify-content: center;
+		flex-flow: column;
 		font-size: 2.5rem;
 	}
 
 	&__header-logo {
-		margin-right: 3rem;
-
 		img {
-			width: 11rem;
+			width: 24rem;
 		}
+	}
+
+	&__header-name {
+		font-size: 3.5rem;
 	}
 
 	&__content {
 		display: flex;
 		justify-content: space-between;
+		u {
+			border-bottom: 0.1rem solid #5EC9F8;
+			text-decoration: none; 
+		}
 	}
 
 	&__info {
@@ -40,7 +48,7 @@
 	}
 
 	&__contact {
-		margin-bottom: 8rem;
+		line-height: 2;
 	}
 
 	&__rules {

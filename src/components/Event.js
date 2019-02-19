@@ -31,14 +31,13 @@ class Event extends React.Component {
 							<img src={eventDetails.img} alt="Logo" />
 						</div>
 						<div className="event__header-name">{eventDetails.name}</div>
+						{!auth && <SignIn/>}
 					</section>
 					<section className="event__content">
 						<div className="event__info">
-							<p>{eventDetails.description}</p>
-							<br/>
-							{!auth && <SignIn/>}
+							<h2 className="heading--secondary">{eventDetails.description}</h2>
 							{auth && !registered && (
-								<button className="btn" onClick={() => registerForEvent(eventDetails)}>
+								<button className="signInBtn" onClick={() => registerForEvent(eventDetails)}>
 									Register
 								</button>
 							)}
@@ -67,10 +66,10 @@ class Event extends React.Component {
 								</p>
 							</div>
 							<div className="event__contact">
-								<h2 className="heading--secondary">Contact</h2>
+								<h2 className="heading--secondary"><u>Contact</u></h2>
 								{eventDetails.contact.map(user => (
 									<p key={user}>
-										{user.name} (+91 {user.phone}) - {user.role}
+										{user.name} {user.phone} - {user.role}
 									</p>
 								))}
 							</div>
